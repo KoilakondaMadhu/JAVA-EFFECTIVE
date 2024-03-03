@@ -39,3 +39,35 @@ public class Main {
 // LinkedList after addLast(): [Horse, Dog, Cat, Cow, Zebra]
 // LinkedList after removeFirst(): [Dog, Cat, Cow, Zebra]
 // LinkedList after removeLast(): [Dog, Cat, Cow]
+
+
+
+===========================================================================================
+// Create an empty LinkedList of strings
+LinkedList<String> animals = new LinkedList<String>();
+
+// Add some animals to the list
+animals.add("dog");
+animals.add("rat");
+
+// Get the first animal in the list
+String firstAnimal = animals.get(0);
+System.out.println("First animal in the list: " + firstAnimal);
+
+// Display all animals in the list using a for-each loop
+for (String animal : animals) {
+    System.out.println(animal);
+}
+
+// Display all animals in the list using the Java 8 lambda syntax
+animals.forEach(animal -> System.out.println(animal));
+
+
+
+
+===================OUTPUT=================================
+//   First animal in the list: dog
+// dog
+// rat
+// dog
+// rat
