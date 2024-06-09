@@ -1,0 +1,27 @@
+class Solution {
+    public int[] getConcatenation(int[] nums) {
+        // Get the length of the input array
+        int k = nums.length;
+
+        // Create a new array of size 2*k to hold the concatenated result
+        int r[] = new int[2 * k];
+
+        // Loop through each element of the input array
+        for (int i = 0; i < k; i++) {
+            // Copy the element to the first half of the result array
+            r[i] = nums[i];
+            // Copy the same element to the second half of the result array
+            r[i + k] = nums[i];
+        }
+
+        // Return the concatenated array
+        return r;
+    }
+}
+
+
+// Input: nums = [1,2,1]
+// Output: [1,2,1,1,2,1]
+// Explanation: The array ans is formed as follows:
+// - ans = [nums[0],nums[1],nums[2],nums[0],nums[1],nums[2]]
+// - ans = [1,2,1,1,2,1]
